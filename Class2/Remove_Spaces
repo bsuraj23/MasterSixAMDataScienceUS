@@ -1,0 +1,39 @@
+s = "  Hello World from Python \t\n "
+
+# Remove leading and trailing whitespace
+stripped_s = s.strip()
+print(stripped_s)
+
+# Remove only leading whitespace
+lstripped_s = s.lstrip()
+print(lstripped_s)
+
+# Remove only trailing whitespace
+rstripped_s = s.rstrip()
+print(rstripped_s)
+
+def remove_spaces(original_string):
+    new_string = ""
+    for char in original_string:
+        if char != " ":
+            new_string += char
+    return new_string
+
+text = "  H e l l o   W o r l d  "
+result = remove_spaces(text)
+print(f"Original: '{text}'")
+print(f"Result: '{result}'")
+
+def remove_spaces_while(original_string):
+    new_string = ""
+    index = 0
+    while index < len(original_string):
+        if original_string[index] != " ":
+            new_string += original_string[index]
+        index += 1
+    return new_string
+
+text = "  P y t h o n   i s   f u n  "
+result = remove_spaces_while(text)
+print(f"Original: '{text}'")
+print(f"Result: '{result}'")

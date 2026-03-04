@@ -1,10 +1,6 @@
 # MasterSixAMDataScienceUS
 MasterSixAMDataScienceUS   Agentic AI GEN AI Projects 
 
-
-
-#add suraj line this is small change 
-
 **Class 2/23**
 1. learn about nano banana,sora,mern, mean,angular,react,nodejs,ETL,power BI,tableu
 2. why the name python
@@ -23,17 +19,29 @@ MasterSixAMDataScienceUS   Agentic AI GEN AI Projects
 **Class 2/25**
 1. diff between compilation and interpretation
 2. Is python interpretation or compilation
-3. Python data types
+3. Data types in python and code for each data type
+4. What is SSH in Github?
 
 **Class 2/26**
-1. python data types and code for each
-2. print your name in upper, lower and title,swapcase
-3. without using the predefined function give me the square root of random number 
-4. what does edit environment variables do in your machine
-5. what is floor and ceil
-6. can you write down a code without predefined functions like isalpha, isdigit, isalnum, isspace
-7. without using in and notin write a code to check if a word is present in the string or not
-8. what is hacker rank, leet code
-9. comparisions of apple and banana
-10. count number of repeated characters in a string
+1. print your name in upper, lower and title,swapcase
+2. without using the predefined function give me the square root of random number 
+3. what does edit environment variables do in your machine
+4. what is floor and ceil
+5. can you write down a code without predefined functions like isalpha, isdigit, isalnum, isspace
+6. without using "in" and "not in" write a code to check if a word is present in the string or not
+7. what is hacker rank, leet code
+8. comparisions of apple and banana
+9. count number of repeated characters in a string
 
+**Class 3/02**
+1. What is prompt Engineering?
+2. Without using slicing operator, write code for reverse of string and palindrome?
+3. Difference between Break and Continue?
+
+**Class 3/02**
+1. Control statements(break, continue, pass)
+2. Pattern programs
+3. What is the difference between float and double and write a program?
+4. Write a program using slicing as a prime, odd, even number
+5. What is "self" in user defined functions
+6. Examples for list, tuple, set, dictionary and operations performed with it.
