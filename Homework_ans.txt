@@ -1,0 +1,213 @@
+Class 2 - 2/23/2026
+================================================================================
+********************************************************************************
+
+1QN:learn about nano banana,sora,mern, mean,angular,react,nodejs,ETL,power BI,tableu
+ANS: nano banana - Nano Banana is a high-performance AI image generation 
+     and editing model developed by Google
+    Sora - OpenAI's Sora is an advanced AI model 
+            and social media app that generates highly realistic, 
+            5-to-20-second videos from text prompts, images, or existing video clips.
+    MERN -  The MERN stack is a popular collection of JavaScript-based technologies 
+            used to build dynamic, full-stack web applications. 
+            The acronym MERN stands for 
+            MongoDB(Database),Express.js(Backend framework),React(Frontend library),Node.js(server-side runtime environment)
+    MEAN -  MongoDB,Express.js,Angular.js,Node.js
+    Angular/React - Angular is a comprehensive, opinionated frontend framework 
+        maintained by Google for building scalable web applications using TypeScript. 
+    React is an open-source JavaScript library maintained by Meta (formerly Facebook)
+        focused specifically on building user interfaces (UI) with a flexible, component-based approach
+    Node.js - Node.js is a free, 
+                         open-source, 
+                         and cross-platform JavaScript runtime environment 
+                         that allows developers to run JavaScript code outside of a web browser. 
+                        It enables JavaScript, which was traditionally a client-side language, 
+                        to be used for server-side scripting, networking applications, and command-line tools.
+
+    ETL - ETL stands for Extract, Transform, and Load, 
+          a fundamental data integration process that gathers raw data from various sources, 
+          cleanses and converts it into a usable format, 
+          and loads it into a centralized system like a data warehouse 
+          for analysis, reporting, and machine learning.
+    Power BI and Tableau - these are leading business intelligence (BI) and data visualization platforms 
+                            used to analyze data, 
+                            create interactive dashboards, 
+                            and generate reports. 
+            Power BI (by Microsoft) is known for its seamless integration with the Microsoft ecosystem, user-friendliness, and lower cost. 
+            Tableau is known for handling larger, complex datasets, advanced customization, and superior, flexible visualizations.
+================================================================================
+2 QN: why the name python ?
+ANS: The Python programming language was named 
+after the British comedy series Monty Python's Flying Circus, not the snake.
+When Guido van Rossum, the creator of Python, 
+began implementing the language in December 1989,
+he was looking for a name that was short, unique, and slightly mysterious. 
+He happened to be reading the published scripts from his favorite TV show, 
+the 1970s BBC comedy Monty Python's Flying Circus, 
+and decided that "Python" was the perfect working title for his new project
+================================================================================
+3 QN: why do we use react as frontend and python/java as backend ?
+ANS: The reason we split development into 
+React (frontend) and Python/Java (backend) is to 
+separate the user experience from the complex business logic. 
+
+This "separation of concerns" allows each part to do what it does best: 
+React handles the visuals and interactivity, 
+while Python or Java handles data, security, and heavy processing.
+================================================================================
+4.QN: what are oops concepts, where it is used and why it is used?
+ANS:1.Encapsulation: Bundling data (attributes) and methods that act on that data into a single unit.
+	2.Inheritance: new "child" class to adopt the attributes and methods of an existing "parent" class.
+	3.Polymorphism: The ability for different classes to be treated as instances of the same base type.
+	4.Abstraction: Hiding complex implementation details and showing only the essential features to the user.
+================================================================================
+5 QN: why do banks use java not python ?
+because Java is built for reliability, security, and extreme scale. 
+Python is simple and readable high-level general purpose programming language used for AI and Data science.
+================================================================================
+6.QN: why python came into picture only during data science ?
+Before Python, a data scientist might use R for analysis, 
+SQL for data, 
+and Java to actually put the model on a website.
+Python is a "One-Stop Shop": 
+It's "good enough" at everything. 
+You can use it to scrape data from the web, 
+clean it, build a model, and deploy it as a web API—all without switching languages
+================================================================================
+7QN: java is used in production why not python
+ 1.  Speed and Raw Performance
+ 2.  Multi-threading and Concurrency
+ 3.  Stability at Scale
+ 4.  Enterprise Ecosystem
+Better Throughput - Java Can handle millions of requests.
+Error Detection - Cought during compilation where as python only during runtime.
+Scalability - Native multi-core support , where as python has single threaded bottlencks.
+================================================================================
+********************************************************************************
+
+
+Class 3 -  2/24/2026
+================================================================================
+1.what is rest architecture, Gitlab, Bitbucket, framework, open source, closed source 
+ANS: Rest architecture : REST (Representational State Transfer) is an architectural style 
+                        for designing networked applications. 
+                        It defines a set of rules for how a client (like your browser or mobile app) 
+                        and a server (where the data lives) should talk to each other over HTTP. 
+                        REST uses standard HTTP methods to perform actions, 
+                        often referred to as CRUD (Create(POST)), Read((GET)), Update(PUT/PATCH), Delete
+    Gitlab: GitLab is a complete, web-based DevSecOps platform.
+             All in one - self hosting tool- handles from planning and coding to security testing and deployment.
+
+
+2. what is MCP
+3. difference b/w GCC and Datacenter 
+4. what are unit test cases and TDT
+
+Class 4 - 2/25/2026
+================================================================================
+diff between compilation and interpretation
+Is python interpretation or compilation
+Python data types
+
+
+
+Class 5 - 02/26/2026
+===============================================================
+
+1. List the total number of data types in Python and provide a code example for each
+Ans : Python classifies its core built-in data types into 7 main categories containing 15 specific types by default. 
+
+7 main categories are -- Text,Numeric,Sequence,Mapping,Set,Boolean,Binary,None
+
+1. Text has str Data type -- 
+ex: x= "Hello World" 
+    print(x)
+
+2. Numeric has int, float,complex data types:
+x=20 # integer
+f=20.5 #float
+x=1j #complex
+
+3. Sequence has list, tuple,range data types:
+x = ["apple","banana""cherry"] #list
+y = ("apple","banana","cherry") #tuple
+n = range(6) #[0,1,2,3,4,5]
+
+4. Mapping 
+dict x = {"name" : "john", "age" : 36}
+
+5. Set
+x = {"apple", "banana", "chery"} #mutable
+y = frozenset({"apple", "banana", "chery"}) #imutable
+permissions = {frozenset(["read", "write"]): "Admin"}  #imutable
+
+6.Boolean
+x= True #bool
+y= False #bool
+
+7. Binary 
+
+x = b"Hello" #bytes
+y = bytearray(5) #bytearray
+z = memoryview(bytes(5)) #memoryview 
+
+8. x = None
+NoneType
+
+Class 2 - 02/23/2026
+===============================================================
+
+QN: ENV variables/Paths:
+ANS: Python virtual env is a directory which will contain Pythoninterpreter,pip,Activation script,local site packages
+Venv is package creating virtualenvironment.
+command: python -m venv myvenv
+
+Path setting up in windows :
+
+If you forgot to check the "Add Python to PATH" box during installation, you can manually add it to your Windows Environment Variables to run python from any terminal. 
+1. Locate Your Python Installation Path
+Before changing settings, you need the exact address of your Python executable. 
+Open the Start Menu, type "Python", right-click the app, and select Open file location.
+Right-click the shortcut in that folder and select Open file location again to reach the folder containing python.exe.
+Copy the path from the address bar (e.g., C:\Users\<User>\AppData\Local\Programs\Python\Python312). 
+2. Add to Environment Variables
+Press the Windows Key, type "Edit the system environment variables", and open it.
+Click the Environment Variables button at the bottom.
+Under User variables, find the Path variable and click Edit.
+Click New and paste the Python path you copied in Step 1.
+Click New again and paste the same path but add \Scripts at the end (e.g., ...\Python312\Scripts) to enable tools like pip.
+Click OK on all windows to save. 
+3. Verify the Path
+Close any open Command Prompts or PowerShell windows and open a new one.
+Type python --version to see your installed version.
+Type where python to see exactly which path Windows is currently using. 
+
+===============================================================
+QN: What is Floor and Ceil ?
+ANS: math.floor(x): Rounds down to the largest integer less than or equal to x.
+math.ceil(x): Rounds up to the smallest integer greater than or equal to x.
+
+Example: 
+import math
+
+val = 3.7
+
+print(math.floor(val))  # Output: 3
+print(math.ceil(val))   # Output: 4
+
+# Negative numbers round toward infinity
+neg_val = -3.7
+print(math.floor(neg_val)) # Output: -4
+print(math.ceil(neg_val))  # Output: -3
+
+===================================================================
+QN: What are Hacker rank and leet code ?
+ANS: HackerRank and LeetCode are popular online platforms for practicing coding, 
+solving algorithms,
+and preparing for technical interviews, 
+featuring,, coding challenges, 
+data structure questions, and assessment tools for developers and employers.
+LeetCode is heavily focused on algorithm-based, company-specific interview preparation, 
+while HackerRank is frequently used for broader skill assessment, 
+including data science and language proficiency, and is often preferred by companies for technical screening.
+======================================================================
