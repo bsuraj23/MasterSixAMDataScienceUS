@@ -1,0 +1,98 @@
+# nested Dictionary: A dictionary that contains another dictionaries as values.
+
+# Simple NestingExample: (Restaurant -> Item)
+
+orders = {
+    'PizzaHut': {'size': 'Large'}, 
+    'Subway': {'bread': 'Italian'}
+}
+
+# Multiple Details: (Dish -> Price & Calories)
+menu = {
+    'Burger': {'price': 10, 'calories': 800},
+    'Pasta': {'price': 12, 'calories': 600}
+}
+
+# Deep Nesting: (Order -> Customer -> Address -> Zip)
+delivery_track = {
+    'Order_101': {
+        'Customer': {
+            'Address': {
+                'Zip': 10001
+            }
+        }
+    }
+}
+
+print("--- 1. Initial Data Structures ---")
+print(f"{orders}")
+print(f"{menu}")
+print(f"{delivery_track}\n")
+
+
+# 2: Iterating (Looking through the data)
+
+print("--- 2. Iterating through Restaurants ---")
+for restaurant, info in orders.items():
+    print(f"Key (Restaurant): {restaurant}, Value (Order): {info}")
+
+print("\n--- 3. Iterating Deeply (Menu Details) ---")
+for dish, specs in menu.items():
+    for detail, value in specs.items():
+        print(f"Dish: {dish} -> {detail}: {value}")
+
+
+
+# 3: Deep Search (The Recursive Method)
+
+
+print("\n--- 4. Scanning Deeply Nested Tracking Info ---")
+def scan_delivery(data, path=""):
+    for key, value in data.items():
+        if isinstance(value, dict):  # If we find another dictionary, go deeper
+            scan_delivery(value, f"{path}{key} -> ")
+        else:  # If we find the final value, print the whole path
+            print(f"Found Info: {path}{key}: {value}")
+
+scan_delivery(delivery_track)
+
+
+
+# 4: Collecting All Values (The List Method)
+
+print("\n--- 5. Collecting All Menu Numbers ---")
+all_numbers = []
+for dish_info in menu.values():
+    all_numbers.extend(dish_info.values())
+
+print(f"List of all prices and calories: {all_numbers}")
+
+
+
+# 5: Flattening (Dictionary Comprehension)
+
+print("\n--- 6. Flattening the Menu ---")
+# Turns {'Burger': {'price': 10}} into {'Burger_price': 10}
+flat_menu = {
+    f"{dish}_{key}": val 
+    for dish, info in menu.items() 
+    for key, val in info.items()
+}
+print(f"Simplified Flat Menu: {flat_menu}")
+
+
+
+# 6: Key Existence Check (Safety)
+
+print("\n--- 7. Checking if 'price' exists for a Burger ---")
+search_dish = "Burger"
+search_key = "price"
+
+if search_dish in menu:
+    if search_key in menu[search_dish]:
+        price = menu[search_dish][search_key]
+        print(f"The {search_key} for {search_dish} is ${price}")
+    else:
+        print(f"Found the dish, but '{search_key}' is missing.")
+else:
+    print(f"'{search_dish}' is not on the menu.")
