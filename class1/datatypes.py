@@ -39,8 +39,8 @@ print("")
 
 #Mutable: list, dict, set, bytearray, etc.
 #none is also a Datatype 
-array = [1, 2, 3, 4, 5]         
-print(type(array))
+L = [1, 2, 3, 4, 5]         
+print(type(L))
 print("")
 
 matrix = [[1, 2, 3], [4, 5, 6]]  
