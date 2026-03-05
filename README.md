@@ -37,3 +37,16 @@ MasterSixAMDataScienceUS   Agentic AI GEN AI Projects
 9. comparisions of apple and banana
 10. count number of repeated characters in a string
 
+**Class 3/4**
+
+1. What is the difference between line number 26 and 29? Using keyword dict and creating a dictionary without using dict (mention file name).
+
+2. Understand nested dictionaries.
+
+3. Explanation of set and frozen set. Why do we use them?
+
+4. Difference between global variable and local variable.
+
+5. What is the difference between binary and ordinary values?
+
+6. What is recursive function?
