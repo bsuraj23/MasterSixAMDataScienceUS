@@ -13,7 +13,7 @@ print(t1)
 
 #Accessing tuple elements
 my_tuple = (1, 2, 3, 'Hello', 3.14)
-print(my_tuple[0])  
+print(my_tuple[0])  #
 print(my_tuple[3])  
 print(my_tuple[-1]) 
 print(my_tuple[1:4])
@@ -41,8 +41,8 @@ print(e)  # Output: 3.14
 
 #methods for tuples
 t = (1, 2, 3, 2, 4)
-print(t.count(2)) 
-print(t.index(3)) 
+print(t.count(2)) # Output: 2
+print(t.index(3)) # Output: 2   
 
 
 # memebership testing
@@ -60,6 +60,7 @@ print(sum(t)) #`sum of all elements in tuple`
 # List in tuple
 t = (1, 2, [3, 4])
 t[2][0] = 100
+t[1]=4
 print(t) #Output: (1, 2, [100, 4])
 
 # conversion of tuple to list
