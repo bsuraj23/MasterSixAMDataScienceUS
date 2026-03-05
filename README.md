@@ -46,7 +46,7 @@ MasterSixAMDataScienceUS   Agentic AI GEN AI Projects
 5. What is "self" in user defined functions
 6. Examples for list, tuple, set, dictionary and operations performed with it.
 
-# Class 3/04**
+# Class 3/04
 1. What is the difference between dictionary creation with dict and without dict keyword?
 2. What is zip do in d = dict(zip(['a','b']))?
 3. What is frozenset and operations done with examples?
