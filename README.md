@@ -51,3 +51,8 @@ MasterSixAMDataScienceUS   Agentic AI GEN AI Projects
 2. What is zip do in d = dict(zip(['a','b']))?
 3. What is frozenset and operations done with examples?
 4. Bulit in functions and usage with examples
+
+# Class 3/05
+1. Recursive function
+2. anonymous_functions, Map, Reduce, Filter, Lambda? Manali - Map, Vijayalakshmi - Reduce
+3. What is difference between args and kwargs in functions?
