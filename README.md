@@ -11,7 +11,7 @@ MasterSixAMDataScienceUS   Agentic AI GEN AI Projects
 7. java is used in production why not python
    
 # Class 2/24
-1.what is rest architecture, Gitlab, Bitbucket, framework, open source, closed source
+1. what is rest architecture, Gitlab, Bitbucket, framework, open source, closed source
 2. what is mcp
 3. difference b/w GCC and Datacenter
 4. what are unit test cases and TDT

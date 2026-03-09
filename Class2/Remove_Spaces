@@ -1,5 +1,4 @@
 s = "  Hello World from Python \t\n "
-
 # Remove leading and trailing whitespace
 stripped_s = s.strip()
 print(stripped_s)
@@ -12,6 +11,7 @@ print(lstripped_s)
 rstripped_s = s.rstrip()
 print(rstripped_s)
 
+# Removing spaces from a string without buit-in functions
 def remove_spaces(original_string):
     new_string = ""
     for char in original_string:
@@ -24,6 +24,7 @@ result = remove_spaces(text)
 print(f"Original: '{text}'")
 print(f"Result: '{result}'")
 
+# Removing spaces using a while loop
 def remove_spaces_while(original_string):
     new_string = ""
     index = 0

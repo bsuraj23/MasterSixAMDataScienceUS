@@ -6,7 +6,7 @@ print(S.title())   # Manhitha Dendi
 print(S.swapcase())# mANHITHA dENDI
 
 
-# Using built in functions
+# Using user defined functions
 LOWER_ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 UPPER_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
