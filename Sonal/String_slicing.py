@@ -14,3 +14,11 @@ s = "Python"
 
 for i in range(len(s)-1, -1, -1):
     print(s[i], end="")
+
+
+#below code will concatnate string because defalut input datatype is string
+
+# a=input("enter value for a")
+# b=input("Enter value for b")
+# c=a+b
+# print("c",c)
