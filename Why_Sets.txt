@@ -1,0 +1,35 @@
+Sets Advantages:
+Removing Duplicates
+Membership Checking - fast check to see if element exists
+Mathematical Set operations
+Intersection of Data /Union/ Finding differences
+Finding Unique values
+Comparing Datasets - Sets are used to filter data as Sets use hashing to lookup fast
+
+SETS IN Real Time:
+Avoiding sending duplicate emails
+Caching systems
+Spam filters
+Social networks
+Stock management
+Shortest path algorithm
+Analytics dashboard for websites/apps (collects organizes and displays data about websites like who all are visiting, popular pages, duration of user using website…)
+Real time monitoring for tracking active sessions, unique IP’s
+
+Note:
+We can implement the functionality of sets without using set() but we need to write long code using user defined functions.
+
+Can Dictionary overtake Set
+Similarities:
+Keys are unique, just like set elements.
+Checking membership is fast 
+Limitations:
+Need to write code for mathematical operation
+Need to store value for each key at least True
+
+Can Tuples overtake Set
+Tuples are immutable so we cannot add or remove elements. Also membership checking is slow compared to set.
+
+Frozen Set in Real time:
+Used for graphs or network clusters, E-commerce sites for combos, System configuration, in feature flags in web applications (turning on and off without code deployment)
+
