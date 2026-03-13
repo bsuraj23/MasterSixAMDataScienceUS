@@ -1,6 +1,0 @@
-1. What is Prompt Engineering?
-
-Prompt engineering means writing clear and effective instructions (prompts) to get the best response from an AI model.
-
-A prompt is simply the input or question you give to AI,Good prompts help AI give better, more accurate answers.
-
