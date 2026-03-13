@@ -5,7 +5,8 @@ def fibonacci(n):
     for _ in range(n):
         series.append(a)
         #a, b = b, a + b  #Pythonic swap method
-        a=b
-        b = a + b
+        temp = a + b      # ✅ Temp stores next value
+        a = b             # ✅ Shift: a becomes old b
+        b = temp 
     return series
-print(fibonacci(10))
+print(fibonacci(6))
