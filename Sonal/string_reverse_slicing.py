@@ -13,7 +13,7 @@ for ch in s:
 print(reverse)
 
 
-#Example of
+#Example of reverse string
 s="Monal"
 for i in range(len(s)-1, -1, -1):
     print(s[i], end="")  #end="" replaces it with empty string ,chars print on same line

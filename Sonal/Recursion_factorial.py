@@ -7,8 +7,8 @@ def fact(no):
 print(fact(4)) 
 
 #Ex2: function with default argument
-def add(x=0,y=0):  
-    c= x + y
-    return c,"Hellow World"
-print(add())  
-print(add(10))  
+# def add(x=0,y=0):  
+#     c= x + y
+#     return c,"Hellow World"
+# print(add())  
+# print(add(10))  

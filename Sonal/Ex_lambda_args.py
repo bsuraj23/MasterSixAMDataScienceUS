@@ -6,10 +6,20 @@
 # concat = lambda *args:(' '*6).join(args)
 # print(concat("Hello","World"))  # Output: Hello World
 
+#Ex1 Sum of arguments with sum() function
 def add(*args):
     return sum(args)
 result = add(1,2,3) #output:6
 print(result)
 print(add(10, 20, 30,23,12  ))  # Output: 60
+
+#Ex2 sum of arguments without sum function
+#def sum1(*args):
+#     ans = 0
+#     for num in args:
+#         ans += num
+#     print(ans)
+
+# sum1(5,6)
 
 
