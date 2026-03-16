@@ -6,7 +6,7 @@ print(my_tuple)
 
 #2. Using the tuple() constructor
 my_tuple2 = tuple([4, 5, 6, 'World', 2.71])
-print(my_tuple2)            
+print(my_tuple2)         =   
 #3. Single element tuple (note the comma)
 t1 = (42,) #Without the comma, it would be considered an integer, not a tuple
 print(t1)   
