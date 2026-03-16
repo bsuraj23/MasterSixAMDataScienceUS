@@ -10,3 +10,9 @@ def is_palindrome(s):
     return True
 
 print(is_palindrome("madam")) 
+
+
+list =[1, 2, 3, 4, 5]
+print(list[0:3])
+list = list * 2
+print(list)
