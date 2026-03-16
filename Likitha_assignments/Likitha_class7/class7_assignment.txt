@@ -1,0 +1,58 @@
+1.Difference between {} and dict() when creating a dictionary:
+Both {} and dict() are used to create dictionaries in Python. However, when using dict() with keyword arguments, the keys must be valid identifiers, because Python treats them like function parameter names.
+A valid identifier is a name that follows Python variable naming rules:
+Must start with a letter or underscore
+Cannot start with a number
+Cannot contain spaces or special characters
+Cannot be a Python keyword
+
+Example:
+
+student = dict(name="Likitha", age=25)   # valid
+
+This will cause an error because first-name is not a valid identifier:
+
+dict(first-name="Likitha")   # invalid
+
+But using {} works because keys are treated as normal strings:
+
+student = {"first-name": "Likitha"}   # valid
+
+Summary:
+{} allows any string as a key, while dict() with keyword arguments requires keys to be valid Python identifiers.
+Key Differences:
+Feature	{}	            dict()
+Speed	Faster	        Slightly slower
+Syntax	More            common	Useful when converting
+Keys	Any valid key	Keys must be valid identifiers in dict(name="x")
+
+2.Nested Dictionary
+
+This is just a dictionary inside another dictionary. Think folders inside folders.
+ Since you deal with JSON-like structures in APIs and data pipelines, you’ve already seen this whether you noticed or not.
+ Real-world style example
+employees = {
+    101: {"name": "John", "salary": 60000},
+    102: {"name": "Sara", "salary": 70000}
+}
+
+print(employees[101]["name"])
+
+3.Difference between ord() and bin() in Python
+
+ord() and bin() are built-in Python functions, but they work on different types of data.
+
+ord() is used to convert a character into its ASCII or Unicode numeric value.
+
+bin() is used to convert a decimal integer into its binary representation.
+
+Example:
+
+print(ord('A'))   # Output: 65
+print(bin(10))    # Output: 0b1010
+
+Explanation:
+
+'A' is a character, and ord('A') returns its ASCII value 65.
+
+10 is a decimal number, and bin(10) converts it into binary 1010 (with 0b prefix).
