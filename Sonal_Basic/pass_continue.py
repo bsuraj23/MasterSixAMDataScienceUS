@@ -3,6 +3,6 @@
 
 for i in range(6):
     if (i==3):
-        #pass
-        continue
+        pass
+        #continue
     print(i)
