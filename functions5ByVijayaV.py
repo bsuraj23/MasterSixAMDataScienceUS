@@ -17,7 +17,7 @@ repeat_line()
 repeat_line(3)
 repeat_line(3,4)
 
-#Otherway around is acceptable
+#Otherway around is acceptable, always remember the order
 def repeat_line(a, b = 1):
     for i in range(b):
         print(a)
