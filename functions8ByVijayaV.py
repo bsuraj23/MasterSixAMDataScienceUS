@@ -1,3 +1,4 @@
+#Classic example of Python, Generating Fibonacci series for user desired number
 def fibonacci(n):
   sequence = []
   a,b = 0, 1
