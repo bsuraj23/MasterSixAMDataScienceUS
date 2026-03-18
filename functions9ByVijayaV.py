@@ -1,4 +1,4 @@
-# # #Calculator: perfect example for conditional branching and input validation
+# Calculator: perfect example for conditional branching and input validation
 def calculator(a, b, operation):
     if operation == 'add':
         return a + b
