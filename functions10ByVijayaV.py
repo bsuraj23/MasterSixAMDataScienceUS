@@ -7,7 +7,9 @@ def reverse_string(text):
 
 print(reverse_string("hello"))
 
-# more concise way using slicing, ::-1 tells python to read the entire string from right to left
+
+# more concise way using slicing. ::-1 will read the string from right to left because of the -1
+
 def reverse(text):
   return text[::-1]
 print(reverse("hello"))

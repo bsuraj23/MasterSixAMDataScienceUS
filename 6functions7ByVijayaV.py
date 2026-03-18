@@ -14,7 +14,7 @@ print(word_frequency(sentence))
 
 
 
-# #variable length args
+# variable length args
 def multiply(*args):
     result = 1
     for num in args:

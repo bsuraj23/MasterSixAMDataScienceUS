@@ -1,5 +1,7 @@
 
-# *args = unlimitted number of arguments and **kwargs = unlimited number of key word arguments
+
+# *args and **kwargs: Dynamic Duo
+
 
 # Example 1: *args - sum all numbers
 def add_all(*args):
