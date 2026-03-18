@@ -1,5 +1,5 @@
 
-# *args and **kwargs
+# *args = unlimitted number of arguments and **kwargs = unlimited number of key word arguments
 
 # Example 1: *args - sum all numbers
 def add_all(*args):
