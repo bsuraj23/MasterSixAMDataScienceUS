@@ -1,4 +1,4 @@
-# 1. Sujit's Original Example
+# 1. Sujit's Original Example that prints a, b times
 def repeat_line(a="Ram", b=1):
     for i in range(b):
         print(a)
@@ -13,9 +13,9 @@ def repeat_line(a= 2, b):
     for i in range(b):
         print(a)
 
-repeat_line()
-repeat_line(3)
-repeat_line(3,4)
+repeat_line() # will get error
+repeat_line(3) # will get error
+repeat_line(3,4) # will get error
 
 #Otherway around is acceptable, always remember the order
 def repeat_line(a, b = 1):

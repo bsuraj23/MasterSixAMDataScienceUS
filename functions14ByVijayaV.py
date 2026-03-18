@@ -1,5 +1,7 @@
 
+
 # *args and **kwargs: Dynamic Duo
+
 
 # Example 1: *args - sum all numbers
 def add_all(*args):

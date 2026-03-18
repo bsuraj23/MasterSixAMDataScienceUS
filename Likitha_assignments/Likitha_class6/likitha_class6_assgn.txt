@@ -1,0 +1,12 @@
+1. What happens if we use = in an if condition?
+
+= is used to assign a value, not to compare.
+
+So Python will give an error.
+
+2. How to print float and double? What is the difference?
+
+In Python, we only use float.
+
+Python does not have a separate double type.
+Python’s float already works like a double (64-bit).
