@@ -1,3 +1,4 @@
+# function that gives the fibonacci series of user desired number, a very classic example 
 def fibonacci(n):
   sequence = []
   a,b = 0, 1
