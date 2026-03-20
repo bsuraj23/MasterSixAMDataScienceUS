@@ -1,0 +1,14 @@
+What Does “Edit Environment Variables” Do?
+Environment variables are system settings that store important information the operating system and programs use.
+
+When you click “Edit Environment Variables”, you can add, change, or remove variables that control how software runs on your computer.
+
+These variables tell programs things like:
+
+where software is installed
+
+where to find executables
+
+configuration settings for applications
+
+Editing environment variables allows you to configure system-level settings such as software paths and runtime configurations so programs can locate required files and executables.

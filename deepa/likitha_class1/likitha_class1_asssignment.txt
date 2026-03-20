@@ -1,0 +1,209 @@
+BEGINNER TECH NOTES – INTERVIEW PREPARATION
+-------------------------------------------
+
+1. HYPER-PERSONALIZATION
+Hyper-personalization means companies use real-time data, AI, and analytics to give very personalized experiences to users.
+
+Example:
+If you search for running shoes on Amazon, the next time you open Amazon you may see:
+- running shoes
+- sports socks
+- fitness products
+
+The system studies your behavior and recommends things you may like.
+
+
+2. WHITE CODING IN AI
+White coding means building an AI solution from scratch without using pre-built models or frameworks.
+
+Example:
+Instead of using a sentiment analysis library, you write logic yourself.
+
+Example Python:
+
+text = "This movie is good"
+
+if "good" in text:
+    print("Positive sentiment")
+
+
+3. CODE COVERAGE
+Code coverage tells how much of your program is tested by test cases.
+
+Example:
+
+def check_number(n):
+    if n > 0:
+        return "Positive"
+    else:
+        return "Negative"
+
+If your tests only check positive numbers, the negative condition is never tested.  
+So coverage is incomplete.
+
+
+4. NANOBANANA
+NanoBanana refers to lightweight AI models that can run on small devices like phones or IoT devices.
+
+Example:
+Face detection in a smartphone camera.
+
+Small AI model runs directly on the phone without a large server.
+
+
+5. SORA
+Sora is an AI system that generates videos from text descriptions.
+
+Example prompt:
+"A dog running on a beach during sunset."
+
+The AI generates a video matching the description.
+
+Used in:
+- advertising
+- movies
+- marketing
+- content creation
+
+
+6. PYTHON DEVELOPER AND NAME ORIGIN
+Python was created by Guido van Rossum in 1991.
+
+The name "Python" comes from the comedy show
+Monty Python's Flying Circus.
+
+
+7. OOP (OBJECT ORIENTED PROGRAMMING) CONCEPTS
+
+Class
+A class is a blueprint for creating objects.
+
+Example:
+class Car:
+    color = "red"
+
+
+Object
+An object is an instance of a class.
+
+Example:
+my_car = Car()
+print(my_car.color)
+
+
+Encapsulation
+Encapsulation hides internal details of a class.
+
+Example:
+class Bank:
+    def __init__(self):
+        self.__balance = 1000
+
+
+Inheritance
+Inheritance allows a class to reuse properties from another class.
+
+Example:
+
+class Animal:
+    def speak(self):
+        print("Animal sound")
+
+class Dog(Animal):
+    pass
+
+d = Dog()
+d.speak()
+
+
+Polymorphism
+Same method name but different behavior.
+
+Example:
+
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+animals = [Dog(), Cat()]
+
+for a in animals:
+    a.sound()
+
+
+8. FRONT-END LANGUAGES
+Front-end languages are used to build the user interface of websites.
+
+Main technologies:
+HTML – structure of the webpage  
+CSS – design and styling  
+JavaScript – interaction and behavior
+
+Example HTML:
+
+<h1>Hello World</h1>
+
+
+9. MEAN STACK
+MEAN is a full stack JavaScript development stack.
+
+M – MongoDB (Database)
+E – Express.js (Backend framework)
+A – Angular (Frontend framework)
+N – Node.js (Server runtime)
+
+
+10. MERN STACK
+MERN is similar to MEAN but uses React instead of Angular.
+
+M – MongoDB
+E – Express
+R – React
+N – Node.js
+
+
+11. WHY JAVA IS USED IN BANKS
+Banks prefer Java because it provides:
+- strong security
+- stability
+- scalability
+- platform independence
+
+Banking systems need reliable software that runs for many years.
+
+
+12. WHY PYTHON IS POPULAR IN DATA SCIENCE
+Python is popular because:
+- easy syntax
+- powerful libraries
+- strong community
+
+Important libraries:
+Pandas – data analysis
+NumPy – numerical computing
+Matplotlib – visualization
+Scikit-learn – machine learning
+
+Example:
+
+import pandas as pd
+
+data = {"sales":[10,20,30]}
+
+df = pd.DataFrame(data)
+
+print(df.mean())
+
+
+13. COBOL IN BANKING
+COBOL is still used in banking because many old systems were built using it.
+
+Reasons:
+- very stable
+- handles financial transactions reliably
+- replacing it would cost billions.
+

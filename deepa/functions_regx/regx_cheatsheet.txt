@@ -1,0 +1,1014 @@
+REGULAR EXPRESSIONS (REGEX) CHEAT SHEET
+======================================
+
+1) WHAT IS REGEX?
+-----------------
+Regex is a pattern language used to search, match, extract, split, and replace text.
+
+Common uses:
+- Validate email, phone, password
+- Extract numbers, dates, IDs
+- Find words in text
+- Replace parts of strings
+- Clean messy text
+
+--------------------------------------------------
+2) BASIC REGEX SYMBOLS
+--------------------------------------------------
+
+.       Any single character except newline
+^       Start of string
+$       End of string
+*       0 or more repetitions
++       1 or more repetitions
+?       0 or 1 repetition
+{n}     Exactly n repetitions
+{n,}    At least n repetitions
+{n,m}   Between n and m repetitions
+[]      Character class
+|       OR
+()      Group
+(?:)    Non-capturing group
+\       Escape special character
+\b      Word boundary
+\B      Not a word boundary
+
+--------------------------------------------------
+3) LITERAL CHARACTERS
+--------------------------------------------------
+
+Pattern: cat
+Matches:
+- cat
+
+Does not match:
+- Cats
+- scatter
+
+Example:
+regex = r"cat"
+
+--------------------------------------------------
+4) SPECIAL CHARACTERS
+--------------------------------------------------
+
+.  = any character
+Example:
+a.c
+Matches:
+- abc
+- a7c
+- a_c
+
+Does not match:
+- ac
+
+--------------------------------------------------
+5) ANCHORS
+--------------------------------------------------
+
+^ = start of string
+$ = end of string
+
+Example:
+^hello
+Matches:
+- hello world
+
+Example:
+world$
+Matches:
+- hello world
+
+Example:
+^hello$
+Matches:
+- hello
+
+Does not match:
+- hello world
+
+--------------------------------------------------
+6) CHARACTER CLASSES
+--------------------------------------------------
+
+[abc]       One of a, b, or c
+[^abc]      Not a, b, or c
+[a-z]       Lowercase letter
+[A-Z]       Uppercase letter
+[0-9]       Digit
+[a-zA-Z]    Any letter
+[a-zA-Z0-9] Any letter or digit
+
+Examples:
+[aeiou]     Any vowel
+[1-5]       Any digit from 1 to 5
+[^0-9]      Any non-digit
+
+--------------------------------------------------
+7) PREDEFINED CHARACTER CLASSES
+--------------------------------------------------
+
+\d      Any digit             [0-9]
+\D      Any non-digit
+\w      Word character        [a-zA-Z0-9_]
+\W      Non-word character
+\s      Whitespace            space, tab, newline
+\S      Non-whitespace
+
+Examples:
+\d+      One or more digits
+\w+      One or more word chars
+\s       A space/tab/newline
+
+--------------------------------------------------
+8) QUANTIFIERS
+--------------------------------------------------
+
+*       0 or more
++       1 or more
+?       0 or 1
+{n}     Exactly n times
+{n,}    n or more
+{n,m}   Between n and m
+
+Examples:
+a*       "", "a", "aa", "aaa"
+a+       "a", "aa", "aaa"
+a?       "", "a"
+a{3}     "aaa"
+a{2,4}   "aa", "aaa", "aaaa"
+
+Examples:
+\d{5}        5 digit zip code
+\d{3}-\d{2}  Like 123-45
+
+--------------------------------------------------
+9) GREEDY VS NON-GREEDY
+--------------------------------------------------
+
+Greedy quantifiers match as much as possible.
+Non-greedy match as little as possible.
+
+Greedy:
+.*      Match as much as possible
+
+Non-greedy:
+.*?     Match as little as possible
+
+Example text:
+<h1>Hello</h1><p>Text</p>
+
+Pattern:
+<.*>
+Greedy match:
+<h1>Hello</h1><p>Text</p>
+
+Pattern:
+<.*?>
+Non-greedy match:
+<h1>
+
+--------------------------------------------------
+10) GROUPING
+--------------------------------------------------
+
+() = capture group
+
+Example:
+(\d{3})-(\d{2})-(\d{4})
+
+For:
+123-45-6789
+
+Groups:
+1 = 123
+2 = 45
+3 = 6789
+
+Useful for:
+- extracting parts
+- reusing groups
+- organizing patterns
+
+--------------------------------------------------
+11) NON-CAPTURING GROUPS
+--------------------------------------------------
+
+(?:...) = group without capturing
+
+Example:
+(?:Mr|Mrs|Ms)\.?
+
+Matches:
+- Mr
+- Mrs
+- Ms
+- Mr.
+- Mrs.
+- Ms.
+
+Use when:
+- you need grouping
+- but do not need the group value later
+
+--------------------------------------------------
+12) OR OPERATOR
+--------------------------------------------------
+
+| = OR
+
+Example:
+cat|dog
+
+Matches:
+- cat
+- dog
+
+Example:
+(grand|small)mother
+
+Matches:
+- grandmother
+- smallmother
+
+--------------------------------------------------
+13) WORD BOUNDARIES
+--------------------------------------------------
+
+\b = word boundary
+\B = not a word boundary
+
+Example:
+\bcat\b
+
+Matches:
+- cat
+
+Does not match:
+- catalog
+- scatter
+
+--------------------------------------------------
+14) ESCAPING SPECIAL CHARACTERS
+--------------------------------------------------
+
+Use backslash \ to match special regex symbols literally.
+
+\.      literal dot
+\*      literal star
+\?      literal question mark
+\$      literal dollar sign
+\^      literal caret
+\\      literal backslash
+\(\)    literal parentheses
+\[\]    literal square brackets
+
+Example:
+r"\."
+Matches:
+- .
+
+Example:
+r"\$100"
+Matches:
+- $100
+
+--------------------------------------------------
+15) COMMON REGEX PATTERNS
+--------------------------------------------------
+
+A) NUMBER
+---------
+\d+
+
+B) INTEGER
+----------
+-?\d+
+
+C) DECIMAL NUMBER
+----------------
+-?\d+(\.\d+)?
+
+D) WORD
+-------
+\w+
+
+E) ONLY LETTERS
+---------------
+^[A-Za-z]+$
+
+F) ONLY DIGITS
+--------------
+^\d+$
+
+G) ALPHANUMERIC
+---------------
+^[A-Za-z0-9]+$
+
+H) WHITESPACE
+-------------
+\s+
+
+I) MULTIPLE SPACES
+------------------
+\s{2,}
+
+--------------------------------------------------
+16) EMAIL REGEX
+--------------------------------------------------
+
+Simple:
+^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$
+
+Matches:
+- test@gmail.com
+- user_123@yahoo.co.in
+
+Note:
+Real email validation can get much messier. Regex can do basic validation, not perfect universal truth.
+
+--------------------------------------------------
+17) PHONE NUMBER REGEX
+--------------------------------------------------
+
+Simple US 10-digit:
+^\d{10}$
+
+With separators:
+^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$
+
+Matches:
+- 1234567890
+- 123-456-7890
+- (123) 456-7890
+- 123.456.7890
+
+--------------------------------------------------
+18) DATE REGEX
+--------------------------------------------------
+
+Simple date MM/DD/YYYY:
+^\d{2}/\d{2}/\d{4}$
+
+YYYY-MM-DD:
+^\d{4}-\d{2}-\d{2}$
+
+Matches structure only, not valid calendar dates.
+
+--------------------------------------------------
+19) PASSWORD REGEX
+--------------------------------------------------
+
+At least 8 chars, one uppercase, one lowercase, one digit, one special char:
+^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$
+
+--------------------------------------------------
+20) ZIP CODE REGEX
+--------------------------------------------------
+
+US ZIP:
+^\d{5}$
+
+US ZIP+4:
+^\d{5}(-\d{4})?$
+
+--------------------------------------------------
+21) LOOKAROUNDS
+--------------------------------------------------
+
+A) POSITIVE LOOKAHEAD
+---------------------
+(?=...)
+Text ahead must match
+
+Example:
+\w+(?=@gmail\.com)
+
+For:
+test@gmail.com
+
+Matches:
+- test
+
+B) NEGATIVE LOOKAHEAD
+---------------------
+(?!...)
+Text ahead must NOT match
+
+Example:
+foo(?!bar)
+
+Matches:
+- foo in "foobaz"
+Does not match:
+- foo in "foobar"
+
+C) POSITIVE LOOKBEHIND
+----------------------
+(?<=...)
+Text before must match
+
+Example:
+(?<=\$)\d+
+
+Matches digits after $
+For:
+$100
+Matches:
+100
+
+D) NEGATIVE LOOKBEHIND
+----------------------
+(?<!...)
+Text before must NOT match
+
+Example:
+(?<!\$)\d+
+
+Matches numbers not preceded by $
+
+--------------------------------------------------
+22) FLAGS / MODIFIERS
+--------------------------------------------------
+
+In Python:
+re.I or re.IGNORECASE    Case-insensitive
+re.M or re.MULTILINE     ^ and $ work line by line
+re.S or re.DOTALL        . matches newline too
+re.X or re.VERBOSE       Allow spacing/comments in regex
+
+Examples:
+re.findall(r"cat", text, re.I)
+
+--------------------------------------------------
+23) PYTHON REGEX METHODS (re MODULE)
+--------------------------------------------------
+
+Import:
+import re
+
+A) re.match(pattern, string)
+----------------------------
+Checks only at the beginning of string
+
+Example:
+re.match(r"\d+", "123abc")
+Matches: 123
+
+Example:
+re.match(r"\d+", "abc123")
+No match
+
+B) re.search(pattern, string)
+-----------------------------
+Searches anywhere in string
+
+Example:
+re.search(r"\d+", "abc123")
+Matches: 123
+
+C) re.findall(pattern, string)
+------------------------------
+Returns all matches as a list
+
+Example:
+re.findall(r"\d+", "a12 b34 c56")
+Output:
+['12', '34', '56']
+
+D) re.finditer(pattern, string)
+-------------------------------
+Returns iterator of match objects
+
+Example:
+for m in re.finditer(r"\d+", "a12 b34"):
+    print(m.group(), m.start(), m.end())
+
+E) re.sub(pattern, repl, string)
+--------------------------------
+Replace matches
+
+Example:
+re.sub(r"\d+", "#", "abc123xyz456")
+Output:
+abc#xyz#
+
+F) re.subn(pattern, repl, string)
+---------------------------------
+Like sub, but also returns replacement count
+
+Example:
+re.subn(r"\d+", "#", "a1b2c3")
+Output:
+('a#b#c#', 3)
+
+G) re.split(pattern, string)
+----------------------------
+Split string by regex pattern
+
+Example:
+re.split(r"[,\s]+", "apple, banana orange")
+Output:
+['apple', 'banana', 'orange']
+
+H) re.fullmatch(pattern, string)
+--------------------------------
+Entire string must match pattern
+
+Example:
+re.fullmatch(r"\d+", "12345")
+Match
+
+Example:
+re.fullmatch(r"\d+", "123a")
+No match
+
+H) re.compile(pattern)
+----------------------
+Compile regex for reuse
+
+Example:
+pattern = re.compile(r"\d+")
+pattern.findall("a12 b34")
+
+--------------------------------------------------
+24) MATCH OBJECT METHODS
+--------------------------------------------------
+
+If you use match() or search(), you get a match object.
+
+Common methods:
+
+group()         Entire match
+group(1)        First captured group
+groups()        All captured groups as tuple
+start()         Start index
+end()           End index
+span()          (start, end)
+
+Example:
+m = re.search(r"(\d{3})-(\d{2})", "123-45")
+
+m.group()       -> '123-45'
+m.group(1)      -> '123'
+m.group(2)      -> '45'
+m.groups()      -> ('123', '45')
+m.start()       -> 0
+m.end()         -> 6
+m.span()        -> (0, 6)
+
+--------------------------------------------------
+25) COMMON DIFFERENCES BETWEEN METHODS
+--------------------------------------------------
+
+match()       Beginning only
+search()      Anywhere in string
+findall()     All matches as list
+finditer()    All matches as iterator
+sub()         Replace matches
+split()       Split by pattern
+fullmatch()   Whole string must match
+
+--------------------------------------------------
+26) RAW STRING IN PYTHON
+--------------------------------------------------
+
+Always prefer raw strings for regex:
+
+r"\d+"
+instead of
+"\\d+"
+
+Why?
+Because backslashes are special in Python strings too.
+
+Good:
+pattern = r"\d+"
+
+Less readable:
+pattern = "\\d+"
+
+--------------------------------------------------
+27) CAPTURE GROUP EXAMPLES
+--------------------------------------------------
+
+Pattern:
+r"(\w+)@(\w+)\.(\w+)"
+
+Text:
+test@gmail.com
+
+Groups:
+1 = test
+2 = gmail
+3 = com
+
+--------------------------------------------------
+28) BACKREFERENCES
+--------------------------------------------------
+
+Use previous captured groups again.
+
+Pattern:
+r"(\w+)\s+\1"
+
+Matches repeated word:
+- hello hello
+- test test
+
+Does not match:
+- hello world
+
+Explanation:
+\1 means same text as group 1
+
+--------------------------------------------------
+29) NAMED GROUPS
+--------------------------------------------------
+
+Syntax:
+(?P<name>...)
+
+Example:
+r"(?P<user>\w+)@(?P<domain>\w+)\.(?P<tld>\w+)"
+
+Then:
+m.group("user")
+m.group("domain")
+m.group("tld")
+
+Useful when there are many groups.
+
+--------------------------------------------------
+30) NON-GREEDY EXAMPLES
+--------------------------------------------------
+
+Text:
+"start123end456end"
+
+Pattern greedy:
+start.*end
+Matches:
+start123end456end
+
+Pattern non-greedy:
+start.*?end
+Matches:
+start123end
+
+--------------------------------------------------
+31) MULTILINE MODE
+--------------------------------------------------
+
+Without re.M:
+^ and $ apply to whole string only
+
+With re.M:
+^ and $ apply to each line
+
+Example:
+text = "one\ntwo\nthree"
+
+re.findall(r"^\w+", text, re.M)
+Output:
+['one', 'two', 'three']
+
+--------------------------------------------------
+32) DOTALL MODE
+--------------------------------------------------
+
+Normally:
+. does not match newline
+
+With re.S:
+. matches newline too
+
+Example:
+text = "hello\nworld"
+
+re.search(r"hello.*world", text, re.S)
+
+--------------------------------------------------
+33) VERBOSE MODE
+--------------------------------------------------
+
+Lets you write readable regex with comments.
+
+Example:
+pattern = re.compile(r"""
+    ^                  # start
+    [A-Za-z0-9._%+-]+  # username
+    @                  # @ symbol
+    [A-Za-z0-9.-]+     # domain
+    \.                 # dot
+    [A-Za-z]{2,}       # extension
+    $                  # end
+""", re.X)
+
+--------------------------------------------------
+34) PRACTICAL PYTHON EXAMPLES
+--------------------------------------------------
+
+A) Extract all numbers
+----------------------
+import re
+text = "Order 123, amount 450, code 88"
+print(re.findall(r"\d+", text))
+Output:
+['123', '450', '88']
+
+B) Extract all words
+--------------------
+print(re.findall(r"\b\w+\b", "Hello, Python world!"))
+Output:
+['Hello', 'Python', 'world']
+
+C) Replace spaces with hyphen
+-----------------------------
+print(re.sub(r"\s+", "-", "Python is fun"))
+Output:
+Python-is-fun
+
+D) Validate email
+-----------------
+email = "test@gmail.com"
+if re.fullmatch(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", email):
+    print("Valid")
+else:
+    print("Invalid")
+
+E) Split on commas or spaces
+----------------------------
+print(re.split(r"[,\s]+", "apple, banana orange"))
+Output:
+['apple', 'banana', 'orange']
+
+--------------------------------------------------
+35) COMMON EXPRESSIONS YOU CAN WRITE
+--------------------------------------------------
+
+A) Starts with
+--------------
+^hello
+
+B) Ends with
+------------
+world$
+
+C) Exact word
+-------------
+\bcat\b
+
+D) Contains digits
+------------------
+\d+
+
+E) Only digits
+--------------
+^\d+$
+
+F) Only letters
+---------------
+^[A-Za-z]+$
+
+G) Only lowercase letters
+-------------------------
+^[a-z]+$
+
+H) Only uppercase letters
+-------------------------
+^[A-Z]+$
+
+I) Letters and spaces only
+--------------------------
+^[A-Za-z\s]+$
+
+J) Username 5 to 12 chars
+-------------------------
+^[A-Za-z0-9_]{5,12}$
+
+K) Hex color code
+-----------------
+^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$
+
+L) URL simple
+-------------
+^https?://[^\s/$.?#].[^\s]*$
+
+M) Repeated spaces
+------------------
+\s{2,}
+
+N) HTML tag simple
+------------------
+<.*?>
+
+O) Number with optional decimal
+-------------------------------
+^-?\d+(\.\d+)?$
+
+P) Time HH:MM
+-------------
+^\d{2}:\d{2}$
+
+Q) SSN format
+-------------
+^\d{3}-\d{2}-\d{4}$
+
+--------------------------------------------------
+36) CHARACTER CLASS SHORTCUT REMINDER
+--------------------------------------------------
+
+[abc]       a or b or c
+[^abc]      not a, b, or c
+[a-z]       lowercase a to z
+[A-Z]       uppercase A to Z
+[0-9]       digits
+[a-zA-Z]    letters only
+[a-zA-Z0-9_] word-like chars
+
+--------------------------------------------------
+37) WHEN TO USE WHICH METHOD
+--------------------------------------------------
+
+Use match():
+- when pattern must be at beginning
+
+Use search():
+- when pattern can be anywhere
+
+Use fullmatch():
+- when entire input must satisfy pattern
+- useful for validation
+
+Use findall():
+- when you want all results quickly
+
+Use finditer():
+- when you want match positions too
+
+Use sub():
+- when cleaning or replacing text
+
+Use split():
+- when splitting by multiple delimiters
+
+--------------------------------------------------
+38) COMMON BEGINNER MISTAKES
+--------------------------------------------------
+
+1. Forgetting raw strings
+Wrong:
+"\d+"
+Better:
+r"\d+"
+
+2. Using match() when you need search()
+match() only checks start
+
+3. Forgetting greedy behavior
+.* may eat too much text
+
+4. Not escaping special characters
+. means any character, not literal dot
+
+5. Using regex for everything
+Sometimes simple string methods are better:
+- in
+- startswith()
+- endswith()
+- split()
+- replace()
+
+--------------------------------------------------
+39) STRING METHODS VS REGEX
+--------------------------------------------------
+
+Use normal string methods when simple:
+- text.startswith("Hello")
+- text.endswith(".com")
+- text.replace("a", "b")
+- text.split(",")
+
+Use regex when patterns are flexible:
+- multiple separators
+- unknown number of digits
+- optional parts
+- validation patterns
+- extracting structured text
+
+--------------------------------------------------
+40) QUICK MEMORY TABLE
+--------------------------------------------------
+
+.       any char
+\d      digit
+\w      word char
+\s      whitespace
+^       start
+$       end
+*       0 or more
++       1 or more
+?       optional / non-greedy helper
+[]      character class
+()      capture group
+|       OR
+\b      word boundary
+
+--------------------------------------------------
+41) MINI PRACTICE EXAMPLES
+--------------------------------------------------
+
+1. Match only 4 digits:
+^\d{4}$
+
+2. Match names with letters only:
+^[A-Za-z]+$
+
+3. Match one or more spaces:
+\s+
+
+4. Match a word at start:
+^\w+
+
+5. Match a word at end:
+\w+$
+
+6. Match file ending in .txt:
+^.*\.txt$
+
+7. Match one vowel:
+[aeiou]
+
+8. Match non-digit:
+\D
+
+9. Match repeated word:
+(\w+)\s+\1
+
+10. Match optional minus sign and digits:
+^-?\d+$
+
+--------------------------------------------------
+42) VERY SHORT PYTHON REFERENCE
+--------------------------------------------------
+
+import re
+
+re.match(pattern, text)
+re.search(pattern, text)
+re.findall(pattern, text)
+re.finditer(pattern, text)
+re.sub(pattern, repl, text)
+re.subn(pattern, repl, text)
+re.split(pattern, text)
+re.fullmatch(pattern, text)
+re.compile(pattern)
+
+--------------------------------------------------
+43) SIMPLE EXAMPLE BLOCK
+--------------------------------------------------
+
+import re
+
+text = "My email is test123@gmail.com and zip is 75024"
+
+email = re.search(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", text)
+zip_code = re.search(r"\b\d{5}\b", text)
+numbers = re.findall(r"\d+", text)
+
+print(email.group())      # test123@gmail.com
+print(zip_code.group())   # 75024
+print(numbers)            # ['123', '75024']
+
+--------------------------------------------------
+44) FINAL REMEMBER THIS
+--------------------------------------------------
+
+Validation:
+- Use fullmatch()
+
+Search anywhere:
+- Use search()
+
+Find all:
+- Use findall()
+
+Replace:
+- Use sub()
+
+Split:
+- Use split()
+
+Need captured parts:
+- Use groups
+
+Need repeated patterns:
+- Use quantifiers
+
+Need alternatives:
+- Use |
+
+Need boundaries:
+- Use ^, $, \b
