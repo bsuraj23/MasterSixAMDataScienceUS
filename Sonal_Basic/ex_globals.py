@@ -1,10 +1,10 @@
 # Example 1
-# x = 100
-# print("first line ", locals()) #that prints the current local namespace dictionary
+x = 100
+print("first line ", locals()) #that prints the current local namespace dictionary
 
 # # Example 2
-# y = "Python"
-# print("y found in globals:", 'y' in globals())
+y = "Python"
+print("y found in globals:", 'y' in globals())
 
 
 
