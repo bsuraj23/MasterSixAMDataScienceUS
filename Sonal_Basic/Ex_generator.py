@@ -5,14 +5,14 @@ def count_up_to(n):
         yield count
         count += 1 
         
-# counter = count_up_to(5)
-# for number in counter:
-#     print(number) 
-
 counter = count_up_to(5)
-print(next(counter))  # Output: 1
-print(next(counter))  # Output: 2
-print(next(counter))  # Output: 3  
+for number in counter:
+    print(number) 
+
+# counter = count_up_to(5)
+# print(next(counter))  # Output: 1
+# print(next(counter))  # Output: 2
+# print(next(counter))  # Output: 3  
 
 # def infinite_counter():
 #     count = 1
